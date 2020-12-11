@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { findAll } from '../services/RestaurantApi';
 
 const { createContext } = require('react');
 
@@ -9,12 +9,9 @@ function RestaurantContextProvider(props) {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/restaurants/').then(
-      (response) => {
-        setRestaurants(response.data);
-      },
-      (error) => console.error(error)
-    );
+    findAll((response) => {
+      setRestaurants(response);
+    });
   }, []);
 
   return (
