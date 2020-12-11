@@ -3,7 +3,7 @@ import { RestaurantContext } from '../../../contexts/RestaurantContext';
 import RestaurantItem from './RestaurantItem';
 
 function RestaurantList() {
-  const [restaurants] = useContext(RestaurantContext);
+  const { restaurants } = useContext(RestaurantContext);
 
   return (
     <div>

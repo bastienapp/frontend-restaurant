@@ -15,7 +15,7 @@ function RestaurantContextProvider(props) {
   }, []);
 
   return (
-    <RestaurantContext.Provider value={[restaurants, setRestaurants]}>
+    <RestaurantContext.Provider value={{ restaurants, setRestaurants }}>
       {props.children}
     </RestaurantContext.Provider>
   );
