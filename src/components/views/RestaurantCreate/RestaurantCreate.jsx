@@ -13,7 +13,6 @@ function RestaurantCreate() {
       (response) => {
         console.log(response);
         findAll((result) => {
-          // mettent à jour la liste des restaurants du context
           setRestaurants(result);
         });
       },
